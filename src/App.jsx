@@ -21,7 +21,7 @@ function App() {
         throw new Error("Invalid JSON format. Expected { \"data\": [values] }");
       }
 
-      const response = await axios.post("http://localhost:3000/bfhl", parsedJson);
+      const response = await axios.post("https://baja-finesry-test.vercel.app/bfhl", parsedJson);
       setData(response.data);
     } catch (err) {
       setError(err.message);
